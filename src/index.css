@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-slate-100
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.lao-text {
+  font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif;
+}
+/* In your CSS file or inside a <style> tag */
+.ql-editor::before {
+  font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif; /* Replace with your desired font */
+  color: #9ca3af; /* Optional: Customize the placeholder color */
+  font-style: italic; /* Optional: Add italic style if needed */
+}
+
+/* lao-text class to apply the custom font to the editor's text content */
+.lao-text .ql-editor {
+  font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif;
+}
+
+/* In your CSS file */
+.swal2-popup {
+  font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif;/* Apply your custom font */
+}
+
+/* Additional styling for the Swal2 elements if needed */
+.swal2-title {
+  font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif; /* Title font */
+}
+
+.swal2-html-container, .swal2-actions {
+  font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif; /* Content font */
+}
+
+.order-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: slide-down 0.3s ease-out;
+  position: relative;
+}
+
+@keyframes slide-down {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.cart-title {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #555;
+}
+
+.cart-items-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.no-items-message {
+  color: #777;
+  font-style: italic;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-modal-button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.close-modal-button:hover {
+  background: #0056b3;
+}
+
+.order-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  padding: 10px;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90%; /* Make sure the modal content does not exceed the screen height */
+  overflow-y: auto; /* Enable vertical scrolling inside the modal if content overflows */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.cart-title {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #555;
+}
+
+.cart-items-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.no-items-message {
+  color: #777;
+  font-style: italic;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-modal-button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+.close-modal-button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+      max-width: 100%; /* Ensure the modal takes up full width on small screens */
+      max-height: 80%; /* Reduce height slightly for better fit on small screens */
+      padding: 15px;
+  }
+
+  .modal-title {
+      font-size: 20px;
+  }
+
+  .close-button {
+      font-size: 20px;
+  }
+}
+
+
+
+
+
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.userTable th, .userTable td {
+  padding: 8px;
+}
+
+.userTable th {
+  background-color:  #975a16 ;
+  color: white;
+}
+
+.userTable tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.userTable.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 1000;
+  overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .userTable {
+    font-size: 0.9rem;
+  }
+  
+  .userTable th, .userTable td {
+    padding: 4px;
+  }
+}
+
+
+
+
